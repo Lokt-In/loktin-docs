@@ -1,7 +1,7 @@
 # ZK Privacy Layer
 
-::: warning In Development
-A research-and-prototype phase feature. Not shipped yet.
+::: warning Coming Soon
+Currently in development
 :::
 
 ## The motivation

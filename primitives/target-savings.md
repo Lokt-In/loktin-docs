@@ -4,7 +4,7 @@ Saving goals. Set a target, a deadline, and a deposit cadence. Loktin debits you
 
 ## Why use Target Savings
 
-Saving for something specific; a trip, a deposit, a new laptop, sometimes fails because the money sits in your spending account and gets eaten by daily life. Target Savings moves saved funds into a contract you can't easily pull from.
+Saving for something specific; a trip, a deposit, a new laptop, sometimes fails because the money sits in your spending account and gets eaten by daily life expenses. Target Savings moves saved funds into a contract you can't easily pull from.
 
 The 1% forfeit is small enough to not be punitive, but real enough to make you think twice before breaking the goal.
 
@@ -14,7 +14,7 @@ The 1% forfeit is small enough to not be punitive, but real enough to make you t
 
 You set:
 
-- **Name**: e.g. "New Apartment"
+- **Name**: e.g. "Meridian 2026"
 - **Target amount**: total USDC you want to reach
 - **Deposit frequency**: Weekly / Biweekly / Monthly
 - **Amount per deposit**: USDC per period
@@ -24,20 +24,11 @@ Loktin shows a projection: at this cadence, you'll deposit X total by the end da
 
 ### 2. One-time approval
 
-Because the Keeper will debit your wallet on a schedule, you authorize the Target Savings contract once to spend up to your target amount via the standard Soroban `approve()` allowance pattern.
+Because we will debit your wallet on a schedule, you authorize the Target Savings contract once to spend up to your target amount via the standard allowance pattern.
 
-This is a single signed transaction. Until you revoke the allowance or it expires, the Keeper can pull `period_amount` per debit cycle.
+Until you revoke the allowance or it expires, we can pull the period amount per debit cycle.
 
-### 3. Automatic periodic deposits
-
-Every day at midnight UTC, the Keeper:
-
-1. Walks all goals
-2. For each goal, checks if the next period is due (`now >= last_deposit_date + period_seconds`)
-3. If yes, calls `process_period(goal_id)` on the contract
-4. The contract uses `transfer_from` to pull `period_amount` from your wallet
-
-If your wallet doesn't have enough USDC, or your allowance has run out, the contract logs a **missed period** and increments the `missed_periods` counter. The end date does **not** shift — you just have less saved than projected.
+If your wallet doesn't have enough USDC, or your allowance has run out, the contract logs a **missed period**. The end date does **not** shift, you just have less saved than projected.
 
 ### 4. Manual top-ups
 
@@ -54,7 +45,7 @@ Two cases:
 
 **Before the end date**: Withdraw allowed, but **1% of the saved balance is forfeited** to the platform fee recipient. You receive 99%.
 
-The forfeit is the commitment device. It's small enough that you can break the lock for a real emergency. It's real enough that you won't break it for an impulse.
+The forfeit serves to enforce your commitment. It's small enough that you can break the lock for a real emergency. It's real enough that you won't break it for an impulse.
 
 ## Walkthrough
 

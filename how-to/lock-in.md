@@ -1,8 +1,8 @@
 # Lock In USDC
 
-A walkthrough for creating a fixed-term lock with tiered APY.
+A walkthrough for creating a fixed-term lock.
 
-## 1. Open Locked In
+## 1. Head over to "Locked In"
 
 Dashboard → sidebar → **Locked In**.
 
@@ -10,8 +10,8 @@ Dashboard → sidebar → **Locked In**.
 
 Fill in:
 
-- Amount to Lock (USDC)
-- Lock Duration: pick a tier from the live-fetched APY table (default: 1mo @ 4%, 3mo @ 6%, 6mo @ 8%, 12mo @ 10%)
+- USDC Amount to Lock
+- Lock Duration: pick a tier from the APY table
 
 A summary appears showing:
 
@@ -19,32 +19,24 @@ A summary appears showing:
 - Duration
 - APY (from the selected tier)
 - Projected yield
-- Total at unlock
+- Expected amount at unlock
 
-## 3. Click "Lock USDC →"
+## 3. Click "Lock USDC"
 
 You'll be prompted to approve the Locked Vault contract first (one-time per amount). Sign the approve transaction in your wallet.
 
-After approval confirms, the lock transaction fires automatically. The contract:
-
-1. Pulls your USDC into the vault
-2. Computes and stores `projected_yield`
-3. Returns a `lock_id`
-
-## 4. Wait
+After approval confirms, the lock transaction fires automatically. If successful, the contract debits you and pulld your USDC into the vault and returns a lock ID with the details of locked amount.
 
 That's it.
 
-The dashboard shows:
+If you head back to your dashboard, you can see:
 
 - A **countdown** to the unlock date
 - A **progress bar** of the lock period
 - The **projected yield**
 
-There is no early withdrawal. The contract method `unlock()` reverts unconditionally if `now < end_date`. This isn't a limitation we can override as it is the entire point of this savings option.
+Note that there is no early withdrawal for this savings option.
 
 ## 5. Unlock at maturity
 
-Once `now >= end_date`, the **Unlock & Withdraw** button activates. Click it, sign — your principal is returned.
-
-Accrued yield will be added to the principal at unlock.
+Once the end date reaches, the **Withdraw** button activates. Click on it, sign the transaction in your wallet, and your principal + accrued yield is sent to your wallet in under 5 minutes.

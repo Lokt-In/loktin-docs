@@ -25,10 +25,10 @@ Penalty paid for breaking a savings commitment early. Currently only Target Savi
 ## Goal
 
 A Target Savings position. Has a name, target amount, end date, deposit cadence, and running balance.
-
+<!-- 
 ## Keeper
 
-A cron service that runs admin jobs, from paying bills to processing periodic deposits.
+A cron service that runs admin jobs, from paying bills to processing periodic deposits. -->
 
 ## Lock
 

@@ -79,7 +79,7 @@ export default defineConfig({
         text: "Reference",
         collapsed: true,
         items: [
-          { text: "Contract IDs", link: "/reference/contract-ids" },
+          // { text: "Contract IDs", link: "/reference/contract-ids" },
           { text: "FAQ", link: "/reference/faq" },
           { text: "Glossary", link: "/reference/glossary" },
         ],

@@ -1,6 +1,10 @@
-# Enroll in Spend & Save
+# Enable Spend & Save
 
-A walkthrough for setting up auto-savings on every USDC spend.
+::: info 🚧 Under development
+Coming soon
+:::
+
+<!-- A walkthrough for setting up auto-savings on every USDC spend.
 
 ## 1. Open Spend & Save
 
@@ -63,4 +67,4 @@ On any other day, the **Withdraw** button is disabled. The contract will revert 
 
 ## Adjusting your save rate
 
-Click the "Save rate: N%" card on the dashboard to re-enroll at a different percentage. Existing saved balance is unaffected. The new rate only applies to future spends.
+Click the "Save rate: N%" card on the dashboard to re-enroll at a different percentage. Existing saved balance is unaffected. The new rate only applies to future spends. -->

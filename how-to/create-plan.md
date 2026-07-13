@@ -1,5 +1,12 @@
 # Create Your First Plan
 
+::: info 🚧 Under development
+Coming soon
+:::
+
+
+<!-- # Create Your First Plan
+
 A walkthrough for creating a billing plan and adding bills.
 
 ## 1. Open the Plans page
@@ -70,4 +77,4 @@ Once the plan duration elapses:
 
 - Any unallocated balance is yours to withdraw
 - The Keeper periodically cleans up expired plans
-- You can also click "End Plan" on the dashboard to claim surplus immediately
+- You can also click "End Plan" on the dashboard to claim surplus immediately -->

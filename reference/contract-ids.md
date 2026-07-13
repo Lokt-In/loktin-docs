@@ -1,4 +1,4 @@
-# Contract IDs
+<!-- # Contract IDs
 
 All Loktin contracts on **Stellar testnet** as of the current deploy.
 
@@ -96,4 +96,4 @@ const tx = await client.create_cycle({
   amount: BigInt(500 * 10_000_000),
 });
 const result = await tx.signAndSend();
-```
+``` -->

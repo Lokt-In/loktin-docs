@@ -1,6 +1,6 @@
 # Set Up Target Savings
 
-A walkthrough for creating a goal-based savings vault with automatic periodic deposits.
+A walkthrough for creating a savings goal vault with automatic periodic deposits.
 
 ## 1. Open Target Savings
 
@@ -24,48 +24,42 @@ You'll be prompted to **approve** the Target Savings contract first. This is a s
 
 1. The `<UsdcAllowance>` component reads your current allowance
 2. If insufficient, shows an "Approve N USDC →" button
-3. Click it, sign the approve transaction in Freighter
-4. After confirmation, the goal creation transaction fires automatically
+3. Click it, sign the approve transaction in your wallet
+4. After confirmation, the goal creation transaction executes automatically
 
-The approve grants the contract permission to spend up to your target amount across the goal's lifetime. you only sign this once.
+The approval grants the contract permission to debit the amount specified per period from your wallet, within the goal's lifetime, until you reach your target amount. you only sign this once.
 
-## 4. The Keeper handles the rest
-
-Every day at 00:00 UTC, the Keeper:
-
-1. Checks if your goal's next period is due
-2. If yes, calls `process_period(goal_id)` on the contract
-3. The contract uses `transfer_from` to pull `period_amount` from your wallet
-
-You don't need to do anything. Just keep your wallet funded.
+The only thing you need to do after creating a goal is keep your wallet funded. We perform periodic checks to see when your goal's next deposit is due. Then automatically deposit the specified amount into your savings vault.
 
 ## 5. Manual top-ups
 
-Click **+ Top Up** on any active goal card. Enter an extra USDC amount, sign — the contract `manual_deposit`s on top of your scheduled deposits.
+Alternatively, you can deposit into your saving's target at any time. Click **+ Top Up** on any active goal card. Enter the USDC amount, sign the transaction. 
 
-Useful when:
+This is useful when:
 
 - A windfall lets you accelerate the goal
 - You missed a period and want to make it up
 - You want to test the flow without waiting a week
+
+Automated deposits from your wallet stop as soon as your goal reaches it's target.
 
 ## 6. Withdraw
 
 **At or after the end date:**
 
 1. Click **Withdraw** on the goal card
-2. Sign; you get 100% back
-3. Goal is marked complete
+2. Sign the transaction in your wallet
+3. You will receive the amount in your wallet within 5 minutes
 
 **Before the end date:**
 
 1. Click **Early Withdraw (-1%)**
-2. Confirm the prompt — you understand 1% will be forfeited
-3. Sign; you get 99% back, the 1% goes to the platform fee recipient
-4. Goal is marked complete
+2. Confirm the prompt; that you understand 1% will be forfeited
+3. Sign the transaction in your wallet.
+4. You will receive the amount in your wallet within 5 minutes
 
 ## Missed periods
 
-If your wallet doesn't have enough USDC (or your allowance is exhausted) when the Keeper tries to debit, the contract logs a missed period and increments `missed_periods`. The end date does **not** shift, you just have less saved than projected.
+If your wallet doesn't have enough USDC when we try to debit, the contract logs a missed period. The end date does **not** shift, you just have less saved than projected.
 
-You can recover by manually depositing extra (Top Up) or by topping up your wallet so future automated debits succeed.
+You can recover by manually depositing extra (via Top Up).
