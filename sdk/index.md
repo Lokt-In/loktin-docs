@@ -31,6 +31,15 @@ Create one SDK instance for testnet with the user's address and a signer. Here `
 
 <<< @/snippets/quickstart.ts#create
 
+## Guides
+
+- [Quickstart](/sdk/quickstart)
+- [Target Savings](/sdk/target-savings)
+- [Spend & Save](/sdk/spend-save)
+- [Keeper](/sdk/keeper)
+- [Security and trust](/sdk/security)
+- [Testnet contracts](/sdk/testnet)
+
 ## API reference
 
 See the [API reference](/sdk/api/).
