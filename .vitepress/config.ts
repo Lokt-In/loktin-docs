@@ -47,7 +47,15 @@ export default defineConfig({
       "/sdk/": [
         {
           text: "SDK",
-          items: [{ text: "Overview", link: "/sdk/" }],
+          items: [
+            { text: "Overview", link: "/sdk/" },
+            { text: "Quickstart", link: "/sdk/quickstart" },
+            { text: "Target Savings", link: "/sdk/target-savings" },
+            { text: "Spend & Save", link: "/sdk/spend-save" },
+            { text: "Keeper", link: "/sdk/keeper" },
+            { text: "Security and trust", link: "/sdk/security" },
+            { text: "Testnet contracts", link: "/sdk/testnet" },
+          ],
         },
         {
           text: "API reference",
