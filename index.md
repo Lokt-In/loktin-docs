@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: "Loktin"
-  text: "Plan. Lock In. Earn."
+  text: "Plan. Lock In. Save."
   tagline: "Auto-pay bills, hit savings goals, lock USDC for fixed terms, or stash a slice of every spend and earn yield via Blend."
   actions:
     - theme: brand
