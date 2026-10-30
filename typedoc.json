@@ -1,0 +1,14 @@
+{
+  "entryPoints": [
+    "node_modules/@loktin/sdk/dist/index.d.ts",
+    "node_modules/@loktin/sdk/dist/target-savings/index.d.ts",
+    "node_modules/@loktin/sdk/dist/spend-save/index.d.ts",
+    "node_modules/@loktin/sdk/dist/keeper/index.d.ts"
+  ],
+  "plugin": ["typedoc-plugin-markdown", "typedoc-vitepress-theme"],
+  "out": "sdk/api",
+  "docsRoot": ".",
+  "excludeExternals": false,
+  "readme": "none",
+  "tsconfig": "tsconfig.typedoc.json"
+}
