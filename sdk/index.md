@@ -11,8 +11,6 @@ It covers two savings primitives:
 - **Target Savings**: the user saves toward a target by a deadline, with scheduled deposits that the contract collects and deposits the user makes by hand.
 - **Spend & Save**: each time the user spends, a share of the spend is saved, either to a Spend & Save balance or into a Target Savings goal. The balance can be withdrawn on one day each month.
 
-The SDK has its own contracts, separate from the Loktin app's for now.
-
 ## Status
 
 This is `1.0.0`, the first stable release, so the API changes only in a new major version. It works on Stellar testnet only.

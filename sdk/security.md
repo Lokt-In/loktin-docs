@@ -2,7 +2,7 @@
 description: "Roles, pause, upgrades, fees and audit status of the Loktin SDK's contracts."
 ---
 
-# Security and trust
+# Security
 
 This page says who can do what on the Loktin contracts, and what no one can do.
 
@@ -71,7 +71,7 @@ Every fee and penalty calculation rounds any fraction down, in the user's favour
 
 ## There is no yield
 
-There is no yield. Savings are held as they are deposited. The contracts' yield slot is switched off, and the constructor refuses any yield source.
+There is no yield. Savings are held as they are deposited. The contracts' yield slot is switched off, and at present, the constructor refuses any yield source.
 
 ## Libraries and audit status
 
@@ -79,4 +79,4 @@ The contracts use OpenZeppelin stellar-contracts 0.8.0, which has been audited. 
 
 ## Testnet only
 
-The contracts have no mainnet deployment, and the SDK refuses the public network.
+The contracts have no mainnet deployment, and the SDK only runs on the testnet.
