@@ -36,7 +36,7 @@ For a spend made by other means, [`saveForSpend`](/sdk/api/spend-save/classes/Sp
 
 The withdrawal window is the whole UTC day of the user's withdrawal day, every month. It can open up to 60 seconds early in real time.
 
-[`nextWindow`](/sdk/api/spend-save/classes/SpendSave#nextwindow) gives the current window if one is open, otherwise the next one, in UTC. Its `end` is the first second after the window. [`windowInTimeZone`](/sdk/api/index/functions/windowInTimeZone) formats it in the device's time zone, or one you name.
+[`nextWindow`](/sdk/api/spend-save/classes/SpendSave#nextwindow) gives the current window if one is open, otherwise the next one, in UTC. Its `end` is the first second after the window. [`windowInTimeZone`](/sdk/api/core/functions/windowInTimeZone) formats it in the device's time zone, or one you name.
 
 <<< @/snippets/spend-save.ts#window
 

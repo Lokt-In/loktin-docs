@@ -11,8 +11,8 @@
     "check:snippets": "tsc -p tsconfig.snippets.json"
   },
   "devDependencies": {
-    "@loktin/sdk": "0.5.0",
-    "@stellar/stellar-sdk": "17.2.1",
+    "@loktin/sdk": "1.0.0",
+    "@stellar/stellar-sdk": "17.4.0",
     "typedoc": "0.28.20",
     "typedoc-plugin-markdown": "4.14.1",
     "typedoc-vitepress-theme": "1.1.4",

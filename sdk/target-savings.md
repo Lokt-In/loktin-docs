@@ -23,7 +23,7 @@ Once the target is reached, or from the deadline second onwards, a withdrawal ca
 
 ## Amounts
 
-Amounts are `bigint` base units. USDC has 7 decimals. [`toBaseUnits`](/sdk/api/index/functions/toBaseUnits) and [`fromBaseUnits`](/sdk/api/index/functions/fromBaseUnits) convert to and from decimal strings.
+Amounts are `bigint` base units. USDC has 7 decimals. [`toBaseUnits`](/sdk/api/core/functions/toBaseUnits) and [`fromBaseUnits`](/sdk/api/core/functions/fromBaseUnits) convert to and from decimal strings.
 
 ## The allowance
 
@@ -78,7 +78,7 @@ Under a lock rule, a withdrawal before the target or deadline is refused while t
 
 ## Errors
 
-Every error the SDK throws is a [`LoktinError`](/sdk/api/index/classes/LoktinError) with a stable `code`:
+Every error the SDK throws is a [`LoktinError`](/sdk/api/core/classes/LoktinError) with a stable `code`:
 
 | Code                     | Meaning                                                                                                                                        |
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |

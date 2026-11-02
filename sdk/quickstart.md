@@ -9,10 +9,10 @@ This page takes you from install to a first goal and a first pay-and-save. The S
 ## Install
 
 ```sh
-npm install @loktin/sdk@next @stellar/stellar-sdk
+npm install @loktin/sdk @stellar/stellar-sdk
 ```
 
-`@stellar/stellar-sdk` is a peer dependency. The SDK needs version 17.2.1 or a later 17.x.
+`@stellar/stellar-sdk` is a peer dependency. The SDK needs version 17.4.0 or a later 17.x.
 
 ## Create the instance
 
@@ -20,7 +20,7 @@ Create one SDK instance for testnet with the user's address and a signer. The si
 
 <<< @/snippets/quickstart.ts#create
 
-Here `userAddress` and `wallet` come from your app. Every write acts for `publicKey`. See [`createLoktin`](/sdk/api/index/functions/createLoktin).
+Here `userAddress` and `wallet` come from your app. Every write acts for `publicKey`. See [`createLoktin`](/sdk/api/core/functions/createLoktin).
 
 ## Create the modules
 
@@ -32,7 +32,7 @@ Here `integratorAddress` comes from your app.
 
 ## Create a first goal
 
-[`createGoal`](/sdk/api/target-savings/classes/TargetSavings#creategoal) creates a goal and gives you its id. Amounts are `bigint` base units. USDC has 7 decimals, and [`toBaseUnits`](/sdk/api/index/functions/toBaseUnits) converts from a decimal string.
+[`createGoal`](/sdk/api/target-savings/classes/TargetSavings#creategoal) creates a goal and gives you its id. Amounts are `bigint` base units. USDC has 7 decimals, and [`toBaseUnits`](/sdk/api/core/functions/toBaseUnits) converts from a decimal string.
 
 <<< @/snippets/quickstart.ts#first-goal
 

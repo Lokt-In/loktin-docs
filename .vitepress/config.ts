@@ -7,7 +7,6 @@ const apiSidebar = JSON.parse(
     "utf-8",
   ),
 );
-apiSidebar[0].text = "@loktin/sdk";
 
 export default defineConfig({
   title: "Loktin Docs",
