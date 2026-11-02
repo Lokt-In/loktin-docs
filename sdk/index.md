@@ -15,12 +15,12 @@ The SDK has its own contracts, separate from the Loktin app's for now.
 
 ## Status
 
-This is the preview release, `0.5.0`. Its API may change before `1.0.0`. It works on Stellar testnet only.
+This is `1.0.0`, the first stable release, so the API changes only in a new major version. It works on Stellar testnet only.
 
 ## Install
 
 ```sh
-npm install @loktin/sdk@next @stellar/stellar-sdk
+npm install @loktin/sdk @stellar/stellar-sdk
 ```
 
 The package is on [npm](https://www.npmjs.com/package/@loktin/sdk). The code is in the [loktin-sdk repo](https://github.com/Lokt-In/loktin-sdk).
